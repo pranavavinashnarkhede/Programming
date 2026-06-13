@@ -28,7 +28,7 @@ class Logic
     }
 }
 
-class Question4
+class Question10
 {
     public static void main(String A[])
     {

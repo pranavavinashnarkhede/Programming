@@ -19,7 +19,7 @@ class Logic
     }
 }
 
-class Question4
+class Question5
 {
     public static void main(String A[])
     {
