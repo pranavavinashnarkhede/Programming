@@ -17,7 +17,7 @@ typedef int BOOL;
 
 BOOL ChkSmall(char ch)
 {
-    if((ch >=97 && ch <=122 ))
+    if((ch >='a' && ch <='z' ))
     {
         return TRUE;
     }
