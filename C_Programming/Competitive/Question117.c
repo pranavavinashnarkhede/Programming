@@ -17,7 +17,7 @@ typedef int BOOL;
 
 BOOL ChkCapital(char ch)
 {
-    if((ch >=65 && ch <=90 ))
+    if((ch >='A' && ch <='Z' ))
     {
         return TRUE;
     }
