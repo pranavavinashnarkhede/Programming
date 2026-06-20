@@ -18,16 +18,16 @@
 void Display(char ch)
 {
     int Cnt = 0 ;
-    if((ch >= 65) && (ch <= 90))
+    if((ch >= 'A') && (ch <= 'Z'))
     {
-        for(Cnt = ch ; Cnt <= 90 ; Cnt++)
+        for(Cnt = ch ; Cnt <= 'Z' ; Cnt++)
         {
             printf("%c\t",Cnt);
         }
     }
-    else if((ch >= 97) && (ch <= 122))
+    else if((ch >= 'a') && (ch <= 'z'))
     {
-        for(Cnt = ch ; Cnt >= 97 ; Cnt--)
+        for(Cnt = ch ; Cnt >= 'a' ; Cnt--)
         {
             printf("%c\t",Cnt);
         }
