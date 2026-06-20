@@ -20,7 +20,7 @@ typedef int BOOL;
 
 BOOL ChkSpecial(char ch)
 {
-    if((ch == 33)||((ch >= 35) && (ch <= 38))||(ch == 64)||(ch == 42)||(ch == 94))
+    if((ch == '!')||((ch == '@') && (ch == '#'))||(ch == '$')||(ch == '%')||(ch == '^')||(ch == '&')||(ch == '*'))
     {
         return TRUE;
     }    
