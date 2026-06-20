@@ -14,19 +14,19 @@ output : Your exam at 9.20 Am
 
 void DisplaySchedule(char ch)
 {
-    if(ch == 65 || ch == 97)
+    if(ch == 'A' || ch == 'a')
     {
         printf("Your exam at 7 AM");
     }
-    else if(ch == 66 || ch == 98)
+    else if(ch == 'B' || ch == 'b')
     {
         printf("Your exam at 8.30 AM");
     }
-    else if(ch == 67 || ch == 99)
+    else if(ch == 'C' || ch == 'c')
     {
         printf("Your exam at 9.20 AM");
     }
-    else if(ch == 68 || ch == 100)
+    else if(ch == 'D' || ch == 'd')
     {
         printf("Your exam at 10.30 AM");
     }
