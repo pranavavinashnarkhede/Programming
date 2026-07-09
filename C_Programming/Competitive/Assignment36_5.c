@@ -1,6 +1,6 @@
 // count numbers less than x
 
-int CountGreater(PNODE head , int x)
+int CountLess(PNODE head , int x)
 {
     PNODE temp = NULL;
     int iCount = 0 ;
