@@ -11,10 +11,10 @@ int FirstOccur(PNODE head , int iNo)
     {
         if (temp->data == iNo)
         {
-            break;
+            return iPos;
         }
         iPos++;
         temp = temp->next ; 
     }
-    return iPos;
+    return -1;          // element not found
 }
