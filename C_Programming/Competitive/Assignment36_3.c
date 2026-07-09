@@ -1,10 +1,10 @@
 // last occurrence position
 
-int FirstOccur(PNODE head , int iNo)
+int LastOccur(PNODE head , int iNo)
 {
     PNODE temp = NULL;
     int iPos = 1 ;
-    int iLast = 0 ;
+    int iLast = -1 ;
 
     temp = head;
 
