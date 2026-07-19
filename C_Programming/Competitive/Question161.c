@@ -1,62 +1,47 @@
 /*
-    write a program which accept one number from user and check whether bit at that position is on 
-    or off . if bit is one return TRUE otherwise return FALSE.
+    Write a program which accept one number from user and count number of ON(1) bits in it without using % and / operator.
+    
+    Input :     11
+    Output :    3
 
-    Input :     10      2
-    Output:     TRUE
 */
 
 #include<stdio.h>
 
-#define TRUE 1
-#define FALSE 0 
-
 typedef unsigned int UINT ;
-typedef int BOOL ;
 
-BOOL ChkBit(UINT iNo , int iPos)
+UINT CountOne(UINT iNo)
 {
+    UINT iCount = 0 ;
+    UINT iCnt = 0 ;
     UINT iMaks = 0x1;
-    UINT Ans = 0 ;
+    UINT iAns = 0 ;
 
-    iMaks = iMaks<<(iPos - 1);
-
-    Ans = iNo & iMaks ;
-
-    if(Ans == iMaks)
+    for(iCnt = 1 ; iCnt <= 32 ; iCnt++ , iMaks = iMaks << 1)
     {
-        return TRUE;
-    }
-    else
-    {
-        return FALSE;
+        iAns = iNo & iMaks;
+        
+        if(iAns == iMaks)
+        {
+            iCount++;
+        }
     }
 
+    return iCount;
+    
 }
 
 int main()
 {
     UINT iValue = 0 ;
-    UINT iLocation = 0 ;
-    BOOL bRet = 0 ;
+    UINT iRet = 0 ;
 
     printf("Enter number : ");
     scanf("%d",&iValue);
 
-    printf("Enter bit position : ");
-    scanf("%d",&iLocation);
+    iRet = CountOne(iValue);
 
+    printf("Number of 1's : %d",iRet);
 
-    bRet = ChkBit(iValue, iLocation);
-
-    if(bRet == TRUE)
-    {
-        printf("Bit is ON");
-    } 
-    else
-    {
-        printf("Bit is OFF");
-    }   
-
-    return 0 ;
+    return 0;
 }
