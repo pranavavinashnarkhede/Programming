@@ -26,7 +26,7 @@ def main():
 
     print("Application is Running....")
 
-    schedule.every().seconds.do(CreateLogFile )
+    schedule.every(10).minutes.do(CreateLogFile )
 
     while True:
         schedule.run_pending()

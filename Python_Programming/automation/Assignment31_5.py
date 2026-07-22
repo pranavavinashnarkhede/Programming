@@ -51,7 +51,7 @@ def main():
 
         print("Directory Scan Application is Running....")
 
-        schedule.every().minutes.do(ScanDirectory , sys.argv[1])
+        schedule.every(5).minutes.do(ScanDirectory , sys.argv[1])
 
         while True:
             schedule.run_pending()
