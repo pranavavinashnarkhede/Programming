@@ -60,23 +60,26 @@ class Solution
     }
 
     iMax = iRowFullSize[0];
+    MaxBookingRow = 1;
+
+    for(i = 1 ; i < iRowFullSize.length ; i++)
+    {
+        if(iRowFullSize[i] > iMax)
+        {
+            iMax = iRowFullSize[i];
+            MaxBookingRow = i + 1;
+        }
+    }
+
+    str = "No";
 
     for(i = 0 ; i < iRowFullSize.length ; i++)
     {
-        if(iRowFullSize[i] >= iMax)
+        if(iRowFullSize[i] == Arr[i].length)
         {
-            MaxBookingRow = i+1;
-
-            if(iRowFullSize[i] == Arr[0].length)
-            {
-                str = "Yes";
-            }
-            else
-            {
-                str = "No";
-            }
+            str = "Yes";
+            break;
         }
-
     }
 
     System.out.println("----------------------------------------------------------------------------");
@@ -117,7 +120,7 @@ class Assignment53_2
         System.out.println("Enter number of columns : ");
         iColumns = sobj.nextInt();
 
-        if(iRows < 0 || iColumns == 0)
+        if(iRows <= 0 || iColumns <= 0)
         {
             System.out.println("Invalid input ");
             return;
