@@ -1,0 +1,44 @@
+/*
+    Accept number of rows and number of columns from user and display
+    below pattern.
+
+    Input : iRow = 4 iCol = 4
+    Output : 
+                    1 2 3 4
+                    2 3 4 5
+                    3 4 5 6
+                    4 5 6 7
+
+*/
+
+import java.util.Scanner;
+
+class Assignment25_5
+{
+    static void Pattern(int iRow , int iCol)
+    {
+        for(int i = 1 ; i <= iRow ; i++)
+        {
+            for(int j = 1 ; j <= iCol ; j++)
+            {           
+                System.out.print((i+j-1)+"\t");
+            }         
+            System.out.println();
+        }
+    }
+
+    public static void main(String A[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        int iValue1 = 0 , iValue2 = 0 ;
+
+        System.out.println("Enter number of rows : ");
+        iValue1 = sobj.nextInt();
+
+        System.out.println("Enter number of Columns : ");
+        iValue2 = sobj.nextInt();
+
+        Pattern(iValue1 , iValue2);
+    }
+}
