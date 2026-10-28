@@ -35,7 +35,7 @@ class Assignment59_3
             {
                 iTemp = arr[i][j];
                 arr[i][j] = arr[i][arr[i].length- 1 - j];
-                arr[i][arr.length - 1 - j] = iTemp;
+                arr[i][arr[i].length - 1 - j] = iTemp;
             }
         
         }
